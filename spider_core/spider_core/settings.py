@@ -1,3 +1,5 @@
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 # Scrapy settings for spider_core project
 #
 # For simplicity, this file contains only settings considered important or
@@ -86,3 +88,7 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+# 百度新闻专用配置
+DOWNLOAD_DELAY = 3  # 遵守robots.txt
+CONCURRENT_REQUESTS_PER_DOMAIN = 2
+AUTOTHROTTLE_ENABLED = True
